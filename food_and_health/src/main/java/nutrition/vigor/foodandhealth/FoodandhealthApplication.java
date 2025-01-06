@@ -1,4 +1,4 @@
-package nutrition.vigor.foodandhealth;
+	package nutrition.vigor.foodandhealth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +8,8 @@ public class FoodandhealthApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FoodandhealthApplication.class, args);
-		System.out.println("here we are starting up");	}
+		System.out.println("here we are starting up");	
+		System.out.println("Hello Hello");
+	}
 
 }
