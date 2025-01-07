@@ -40,6 +40,7 @@ public class FoodNutritionServiceImpl implements FoodNutritionService {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("we are here fetched response " + response);
         return response.toString();
     }
 

@@ -17,7 +17,7 @@ public class NutritionController {
 	
 	
 	@Autowired
-	FoodNutritionServiceImpl foodNutritionServiceImpl;
+	FoodNutritionService foodNutritionService;
 	
 	@GetMapping("/")
 	public String hi() {
@@ -30,7 +30,7 @@ public class NutritionController {
 		FoodItem n1 = new FoodItem();
 		n1.setFoodItemName("jal jeera");
 		System.out.println("we are here in controller");
-		foodNutritionServiceImpl.getNutritionOfItem(foodItem);
+		foodNutritionService.getNutritionOfItem(foodItem);
 		return n1;
 	}
 }
