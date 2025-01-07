@@ -2,28 +2,35 @@ package nutrition.vigor.foodandhealth.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import nutrition.vigor.foodandhealth.beans.Nutrients;
+import nutrition.vigor.foodandhealth.beans.FoodItem;
+import nutrition.vigor.foodandhealth.service.FoodNutritionService;
+import nutrition.vigor.foodandhealth.service.FoodNutritionServiceImpl;
 
 
 @RestController
 public class NutritionController {
 	
+	
+	@Autowired
+	FoodNutritionServiceImpl foodNutritionServiceImpl;
+	
 	@GetMapping("/")
 	public String hi() {
 		return "h1";
 	}
+
 	
 	@GetMapping("/getDishNutrients")
-	public Nutrients getDishNutrients() {
-		Nutrients n1 = new Nutrients();
-		n1.setProtein(12);
-		n1.setCalories(150);
-		n1.setFibre(50);
-		n1.setFat(2);
+	public FoodItem getDishNutrients(String foodItem) {
+		FoodItem n1 = new FoodItem();
+		n1.setFoodItemName("jal jeera");
+		System.out.println("we are here in controller");
+		foodNutritionServiceImpl.getNutritionOfItem(foodItem);
 		return n1;
 	}
 }

@@ -2,6 +2,7 @@ package nutrition.vigor.foodandhealth.beans;
 
 
 public class Nutrients {
+
 	
 	int calories;
 	int protein;
